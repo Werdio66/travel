@@ -47,4 +47,16 @@ public class UserDAOImpl implements IUserDAO {
         String sql = "UPDATE tab_user SET status = 'Y' WHERE uid = ?";
         jdbcTemplate.update(sql,user.getUid());
     }
+
+    @Override
+    public User findByUserNameAndPassword(User user) {
+        String sql = "SELECT * FROM tab_user WHERE username = ? AND password = ?";
+        User u = null;
+        try{
+            u = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class),user.getUsername(),user.getPassword() );
+        }catch (Exception e){
+        }
+
+        return u;
+    }
 }

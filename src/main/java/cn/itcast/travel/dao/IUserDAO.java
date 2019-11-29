@@ -28,4 +28,6 @@ public interface IUserDAO {
      * @param user      要修改的对象
      */
     void updateStatus(User user);
+
+    User findByUserNameAndPassword(User user);
 }

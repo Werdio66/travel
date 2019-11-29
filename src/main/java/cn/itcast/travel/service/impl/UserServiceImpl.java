@@ -51,4 +51,9 @@ public class UserServiceImpl implements IUserService {
             return false;
         }
     }
+
+    @Override
+    public User login(User user) {
+        return userDAO.findByUserNameAndPassword(user);
+    }
 }

@@ -11,4 +11,6 @@ public interface IUserService {
     boolean register(User user);
 
     boolean active(String code);
+
+    User login(User user);
 }
