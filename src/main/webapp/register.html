@@ -103,7 +103,7 @@
 					// 异步ajax提交表单数据
 					if (flag){
 						// $("#registerForm").serialize()将表单中的数据序列化为username=17060209110&password=333形式
-						$.post("registerServlet",$("#registerForm").serialize(),function (date) {
+						$.post("/user/register",$("#registerForm").serialize(),function (date) {
 							// 处理服务器响应数据
 							if (date.flag) {
 								// 没有错误，跳转到成功界面
@@ -141,7 +141,7 @@
     			<div class="rg_form_center">
 					<div style="color: red; text-align: center" id="registerErrerMsg"></div>
 					<!--注册表单-->
-    				<form id="registerForm" action="register" method="post">
+    				<form id="registerForm" action="" method="post">
 						<!--提交处理请求的标识符-->
 						<input type="hidden" name="action" value="register">
     					<table style="margin-top: 25px;">

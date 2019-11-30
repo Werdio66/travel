@@ -2,7 +2,7 @@
 <script>
     //
     $(function () {
-      $.get("findUserServlet",{},function (date) {
+      $.get("/user/findUser",{},function (date) {
           var msg = "欢迎回来，" + date.name;
           $("#welecome_user").html(msg);
       })

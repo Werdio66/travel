@@ -28,7 +28,7 @@
 				// 第一个参数：表单提交的servlet
 				// 第二个参数：把表单的数据序列化成json类型
 				// 第三个参数：处理后台返回的数据
-				$.post("loginServlet",$("#loginForm").serialize(),function (date) {
+				$.post("/user/login",$("#loginForm").serialize(),function (date) {
 					if (date.flag){
 						// 登录成功，跳转界面
 						location.href="index.html";

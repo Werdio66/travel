@@ -22,7 +22,7 @@ public class UserServiceImpl implements IUserService {
             // 用户不存在，保存
             userDAO.save(user);
             // 发送的信息
-            String context = "<a href = 'http://localhost/travel/activeServlet?code=" + user.getCode() + "'>激活</a>";
+            String context = "<a href = 'http://localhost/travel//user/active?code=" + user.getCode() + "'>激活</a>";
             System.out.println("发送的消息:" + context);
             // 激活邮件发送
             MailUtils.sendMail(user.getEmail(),context,"激活");
